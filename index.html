@@ -20,38 +20,38 @@
 	}
 </script>
 <body>
-	<div class="headline">
-		<h1>자기 소개</h1>
+	<div class="headline tooltip itsnotme">
+		<h1>각 요소를 클릭하거나 커서를 올려보세요</h1>
 	</div>
 
 	<div class="container">
-		<div class="img-container">
+		<div class="img-container tooltip p_img">
 			<img id="profile" src="profile_1.png" alt="프로필 이미지" width="300" height="auto" onclick="changeImage()">
 			<div id="imageNum">1/2</div>
 		</div>
 		<div class="text-icon-container">
 			<div class="text-container">
-				<p>이름 : 정민호</p>
+				<p class="tooltip t_name">이름 : 정민호</p>
 				<p>소속 : 단국대학교, SW융합대학</p>
-				<p>학과 : 모바일 시스템 공학과</p>
+				<p class="tooltip t_major">학과 : 모바일 시스템 공학과</p>
 				<p>이메일 : 32194074@dankook.ac.kr</p>
-				<p>전화번호 : 010-9256-6504</p>
+				<p class="tooltip t_number">전화번호 : 010-9256-6504</p>
 			</div>
 			<div class="icon-container">
-				<a href="https://github.com/MyKnow"><i class="fab fa-github"></i></a>
-				<a href="https://www.instagram.com/myknow00/"><i class="fab fa-instagram"></i></a>
-				<a href="https://www.youtube.com/@my_know"><i class="fab fa-youtube"></i></a>
+				<a class = "tooltip github" href="https://github.com/MyKnow"><i class="fab fa-github"></i></a>
+				<a class = "tooltip inst" href="https://www.instagram.com/myknow00/"><i class="fab fa-instagram"></i></a>
+				<a class = "tooltip ytlink" href="https://www.youtube.com/@my_know"><i class="fab fa-youtube"></i></a>
 			</div>
 		</div>
 	</div>
 
-	<div class="youtube">
+	<div class="youtube tooltip iftip">
 		<iframe width="720" height="420" src="https://www.youtube.com/embed/5MuD9xgceC4" frameborder="1" allowfullscreen></iframe>
 	</div>
 
 	<div class="copyright-container">
-		<p>아이콘 : font-awesome</p>
-		<p>DKU 로고 : Dankook University</p>
+		<p>아이콘 : <a class = "tooltip copytip" href="https://fontawesome.com">font awesome</a></p>
+		<p>단국대학교 로고 : <a class = "tooltip copytip" href="https://www.dankook.ac.kr">단국대학교</a></p>
 	</div>
 </body>
 </html>

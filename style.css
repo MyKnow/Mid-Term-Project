@@ -5,7 +5,8 @@
 
 .headline{
   font-family: 'DKU';
-  font-size:large;
+  font-size: 1.1vw;
+  text-align: center;
 
   background:rgba(255, 255, 255, 0.5);
   display: flex;
@@ -87,6 +88,7 @@ body::before {
 .text-container {
   font-family: 'DKU';
   font-size: medium;
+
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -95,7 +97,8 @@ body::before {
 }
 
 .icon-container {
-  font-size: 30px;
+  font-size: xx-large;
+
   display: flex;
   justify-content: space-between;
   margin-top: 20px;
@@ -133,4 +136,83 @@ body::before {
   align-items: center;
 
   margin-top: 50px;
+}
+
+.tooltip {
+  position: relative;
+}
+
+.tooltip::before {
+  font-family: 'DKU';
+  content: "Click me!";
+  color: #fff;
+  font-size: x-small;
+  
+
+  border-radius: 5px;
+  background-color: #000;
+  width: max-content;
+  padding: 5px;
+  opacity: 0.5;
+
+  position: absolute;
+  transform: translateX(-30%) translateY(-50%);
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.tooltip:hover::before {
+  opacity: 1;
+  visibility: visible;
+}
+
+.itsnotme::before {
+  transform: translateX(-30%) translateY(150%);
+  font-size: medium;
+  content:"브라우저 창의 크기를 자유롭게 조절해보세요!";
+}
+
+.p_img::before {
+  font-size: large;
+  content: "사진 찍는 거 좋아해요!";
+}
+
+.t_name::before {
+  font-size: small;
+  transform: translateX(10%);
+  content:"丁敏皓, Jeong Minho"
+}
+
+.t_major::before {
+  font-size: small;
+  transform: translateX(10%);
+  content:"비상~ 모바일!"
+}
+
+.t_number::before {
+  font-size: small;
+  transform: translateX(10%);
+  content:"악용하진.. 않을거죠..?"
+}
+
+.github::before {
+  content: "별 거 없는 깃헙";
+}
+
+.inst::before {
+  content: "아무나 맞팔해요!";
+}
+
+.ytlink::before {
+  content: "지금은 잘 안합니다..";
+}
+
+.iftip::before{
+  font-size: large;
+  content: "예전에 찍었던 영상이에요!"
+}
+
+.copytip::before {
+  font-size: large;
+  content: "해당 사이트로 이동!"
 }
