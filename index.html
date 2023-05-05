@@ -9,17 +9,33 @@
     	href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css"
   	/>
 </head>
+<script>
+	var currentImageNum = 1;
+	function changeImage() {
+		var image = document.getElementById('profile');
+		var imageNum = document.getElementById('imageNum');
+		currentImageNum = (currentImageNum % 2) + 1;
+		image.src = 'profile_' + currentImageNum + '.png';
+		imageNum.innerHTML = currentImageNum + "/2";
+	}
+</script>
 <body>
-	<div class="headline"><h1>기본 정보</h1></div>
+	<div class="headline">
+		<h1>자기 소개</h1>
+	</div>
+
 	<div class="container">
-		<img src="profile.jpg" alt="프로필 이미지" width="300" height="auto">
+		<div class="img-container">
+			<img id="profile" src="profile_1.png" alt="프로필 이미지" width="300" height="auto" onclick="changeImage()">
+			<div id="imageNum">1/2</div>
+		</div>
 		<div class="text-icon-container">
 			<div class="text-container">
-				<p>이름 : <strong>정민호</strong></p>
-				<p>소속 : <strong>단국대학교, SW융합대학</strong></p>
-				<p>학과 : <strong>모바일 시스템 공학과</strong></p>
-				<p>이메일 : <strong>32194074@dankook.ac.kr</strong></p>
-				<p>전화번호 : <strong>010-9256-6504</strong></p>
+				<p>이름 : 정민호</p>
+				<p>소속 : 단국대학교, SW융합대학</p>
+				<p>학과 : 모바일 시스템 공학과</p>
+				<p>이메일 : 32194074@dankook.ac.kr</p>
+				<p>전화번호 : 010-9256-6504</p>
 			</div>
 			<div class="icon-container">
 				<a href="https://github.com/MyKnow"><i class="fab fa-github"></i></a>
@@ -28,8 +44,13 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="youtube">
 		<iframe width="560" height="315" src="https://www.youtube.com/embed/5MuD9xgceC4" frameborder="0" allowfullscreen></iframe>
+	</div>
+
+	<div class="copyright-container">
+
 	</div>
 </body>
 </html>
